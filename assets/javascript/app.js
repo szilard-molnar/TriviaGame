@@ -13,3 +13,11 @@
 // restart button that starts over again.
 
 // Bonus for me: if there is time, create the game in Hungarian too. Have a radio button that gives tha player the chance to pick another language option besides english.
+
+$(document).ready(function () 
+{
+    $("#start").click(function()
+    {
+        $("#game").show();
+    })
+})
