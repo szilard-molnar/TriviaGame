@@ -9,24 +9,150 @@
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="./assets/javascript/app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Pangolin|Righteous|Sniglet|Special+Elite&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <h1>Trivia about Hungarian History!</h1>
+    <div id="heading">
+    <h1>Trivia about Hungarian history!</h1>
+
+    <p id="description">
+        Test your knowledge in Hungarian history! You will have 120 seconds to answer ALL the questions!!! 
+    </p>
 
     <button id="start">Start!</button>
-    
+    </div>
+
     <div id="game">
+    <div id="timer"></div>
 
-    <div id="question1">
-        <h3>When was the Hungarian State established?</h3>
-        <input type="radio" name="answer1" value="answer1">1001 AD</input>
-        <input type="radio" name="answer1" value="answer2">895 AD</input>
-        <input type="radio" name="answer1" value="answer3">1242 AD</input>
-        <input type="radio" name="answer1" value="answer4">933 AD</input>
+        <div id="question1">
+            <h3>When was the Hungarian State established?</h3>
+            <input type="radio" name="1001 AD" value="1001 AD" class="answer1">1001 AD</input>
+            <input type="radio" name="answer" value="incorrect" class="wrong1">1222 AD</input>
+            <input type="radio" name="answer" value="incorrect" class="wrong1">1301 AD</input>
+            <input type="radio" name="answer" value="incorrect" class="wrong1">933 AD</input>
+        </div>
+
+        <br>
+
+        <div id="question2">
+            <h3>Which Hungarian king was named also "The Righteous"?</h3>
+            <input type="radio" name="answer2" value="incorrect" class="wrong2">Bela IV</input>
+            <input type="radio" name="answer2" value="incorrect" class="wrong2">Stephen I</input>
+            <input type="radio" name="Matthias" value="Matthias I" class="answer2">Matthias I</input>
+            <input type="radio" name="answer2" value="incorrect" class="wrong2">Andrew II</input>
+        </div>
+
+        <br>
+
+        <div id="question3">
+            <h3>Which empire destroyed the Hungarian Kingdom in 1241-42 AD?</h3>
+            <input type="radio" name="answer3" value="incorrect">The Holy Roman Empire</input>
+            <input type="radio" name="answer3" value="The Mongolians" class="answer3">The Mongolian Empire</input>
+            <input type="radio" name="answer3" value="incorrect">The Frankish Empire</input>
+            <input type="radio" name="answer3" value="incorrect">The Turkish Empire</input>
+        </div>
+
+        <br>
+
+        <div id="question4">
+            <h3>Which one was the first bridge that was built across the Danube to connect Buda and Pest?</h3>
+            <input type="radio" name="answer4" value="incorrect">The Margaret Bridge</input>
+            <input type="radio" name="answer4" value="incorrect">The Elizabeth Bridge</input>
+            <input type="radio" name="answer4" value="incorrect">The Freedom Bridge</input>
+            <input type="radio" name="Chain Bridge" value="Chain Bridge" class="answer4">The Chain Bridge</input>
+        </div>
+
+        <br>
+
+        <div id="question5">
+            <h3>Who was the emperor of Austro-Hungarian Empire when World War I started?</h3>
+            <input type="radio" name="answer5" value="incorrect">King Saint Stephen</input>
+            <input type="radio" name="answer5" value="incorrect">Maria Theresa</input>
+            <input type="radio" name="Franz Joseph" value="Franz Joseph" class="answer5">Franz Joseph I</input>
+            <input type="radio" name="answer5" value="incorrect">Charlemagne</input>
+        </div>
+
+        <br>
+
+        <div id="question6">
+            <h3>When did the Turkish Army occupy the castle of Buda?</h3>
+            <input type="radio" name="1541 AD" value="1541 AD" class="answer6">1541 AD</input>
+            <input type="radio" name="answer6" value="incorrect">1241 AD</input>
+            <input type="radio" name="answer6" value="incorrect">1918 AD</input>
+            <input type="radio" name="answer6" value="incorrect">1686 AD</input>
+        </div>
+
+        <br>
+
+        <div id="question7">
+            <h3>Louis II died right after the battle of Mohacs fighting the Turkish in 1526 AD. How?</h3>
+            <input type="radio" name="answer7" value="incorrect">He got killed by an archer.</input>
+            <input type="radio" name="answer7" value="incorrect">A Turkish soldier, named Yusuf stabbed him with his sword.</input>
+            <input type="radio" name="answer7" value="incorrect">He died of plague.</input>
+            <input type="radio" name="Drowned" value="Drowned" class="answer7">He drowned in a stream next to the battlefield while he was escaping.</input>
+        </div>
+
+        <br>
+
+        <div id="question8">
+            <h3>In around 1110 AD one of the Hungarian kings said: "There are no such things as witches." Who said this sentence?</h3>
+            <input type="radio" name="answer8" value="incorrect">Bela the Blind</input>
+            <input type="radio" name="answer8" value="incorrect">Louis the Great</input>
+            <input type="radio" name="Kalman" value="Kalman" class="answer8">Coloman the Learned</input>
+            <input type="radio" name="answer8" value="incorrect">Saint Ladislau</input>
+        </div>
+
+        <br><br>
+
+        <input type="submit" id="submitButton">
+
+        <br>
+
     </div>
 
+<div id="resultPage">
+
+    <div id="answers">
+            <div id="goodAnswerNumber"></div>
+            <div id="badAnswerNumber"></div>
     </div>
 
-</body>
+    <br><br>
+
+    <div id="losingPicture">
+    <img src="https://image.shutterstock.com/image-vector/you-lose-red-stamp-text-260nw-303609533.jpg">
+    </div>
+
+    <div id="winningPicture">
+        <p id="youAreAnExpert">You are an expert in Hungarian history! Good job!!!</p>
+        <img src="https://image.shutterstock.com/image-vector/you-win-design-element-eps10-260nw-254863618.jpg">
+    </div>
+
+    <p id="almostParagraph">YOU ALMOST MADE IT!!!</p>
+
+    <div id="almostWinning">
+        <img src="https://media.giphy.com/media/kLwCTZro5uCfC/giphy.gif">
+    </div>
+
+    <div id="allCorrectAnswers">
+        <p>The correct answers: </p>
+        <ul>
+            <li>1001 AD</li>
+            <li>Matthias I</li>
+            <li>The Mongolian Empire</li>
+            <li>The Chain Bridge</li>
+            <li>Franz Joseph I</li>
+            <li>1541 AD</li>
+            <li>He drowned</li>
+            <li>Coloman the Learned</li>
+        </ul>
+    </div>
+
+    <input type="button" id="restartButton" value="Restart!" onClick="location.href=location.href">
+
+</div>
+
+    </body>
 </html>

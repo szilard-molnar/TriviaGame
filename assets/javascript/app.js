@@ -16,8 +16,139 @@
 
 $(document).ready(function () 
 {
+    var timeLeft = 120;
+    var good = 0;
+    var bad = 0;
+    var answerArray = [];
+
+    function countdown()
+    {
+        setTimeout(countdown, 1000);
+        if(timeLeft == -1)
+        {
+            clearTimeout;
+            $("#game").hide();
+            $("#losingPicture").show();
+            return;
+        }
+        else
+        {
+            $("#timer").html("<p>You have "+timeLeft+" seconds left.");
+            timeLeft--;
+        }
+    }
+
+    
     $("#start").click(function()
     {
+        $("#heading").hide();
+        countdown();
+
         $("#game").show();
     })
+
+    $("#submitButton").click(function()
+    {   
+        $("#submitButton").hide();
+        $("#restartButton").show();
+
+        if($("input[class='answer1']:checked").val())
+            {
+                answerArray.push($(".answer1").val());
+                good++;
+            }
+        else{
+            bad++;
+        }
+
+        if($("input[class='answer2']:checked").val())
+            {
+                answerArray.push($(".answer2").val());
+                good++;
+            }
+        else{
+            bad++;
+        }
+
+        if($("input[class='answer3']:checked").val())
+            {
+                answerArray.push($(".answer3").val());
+                good++;
+            }
+        else{
+            bad++;
+        }
+
+        if($("input[class='answer4']:checked").val())
+            {
+                answerArray.push($(".answer4").val());
+                good++;
+            }
+        else{
+            bad++;
+        }
+
+        if($("input[class='answer5']:checked").val())
+        {
+            answerArray.push($(".answer5").val());
+            good++;
+        }
+        else{
+            bad++;
+        }
+
+        if($("input[class='answer6']:checked").val())
+        {
+            answerArray.push($(".answer6").val());
+            good++;
+        }
+        else{
+            bad++;
+        }
+
+        if($("input[class='answer7']:checked").val())
+        {
+            answerArray.push($(".answer7").val());
+            good++;
+        }
+        else{
+            bad++;
+        }
+
+        if($("input[class='answer8']:checked").val())
+        {
+            answerArray.push($(".answer8").val());
+            good++;
+        }
+        else{
+            bad++;
+        }
+
+            console.log(answerArray);
+
+        $("#goodAnswerNumber").html("<p>Correct answers: "+ good + "</p>");
+        $("#badAnswerNumber").html("<p>Incorrect answers: "+ bad + "</p>");
+
+        for(var i = 0; i < answerArray.length; i++)
+        {
+            if(answerArray.length === 8 || answerArray.length === 7)
+            {
+                $("#game").hide();
+                $("#winningPicture").show();
+            }
+            else if(answerArray.length === 6 || answerArray.length === 5)
+            {
+                $("#game").hide();
+                $("#almostWinning").show();
+            }
+            else if(answerArray.length <= 4)
+            {
+                $("#game").hide();
+                $("#losingPicture").show();
+            }
+        }
+
+        $("#resultPage").show();
+    })
+
 })
