@@ -135,16 +135,19 @@ $(document).ready(function ()
             {
                 $("#game").hide();
                 $("#winningPicture").show();
+                $("#youAreAnExpert").show();
             }
             else if(answerArray.length === 6 || answerArray.length === 5)
             {
                 $("#game").hide();
                 $("#almostWinning").show();
+                $("#almostParagraph").show();
             }
             else if(answerArray.length <= 4)
             {
                 $("#game").hide();
                 $("#losingPicture").show();
+                $("#youNeedToPractice").show();
             }
         }
 
