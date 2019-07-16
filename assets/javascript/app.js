@@ -129,9 +129,15 @@ $(document).ready(function ()
         $("#goodAnswerNumber").html("<p>Correct answers: "+ good + "</p>");
         $("#badAnswerNumber").html("<p>Incorrect answers: "+ bad + "</p>");
 
-        for(var i = 0; i < answerArray.length; i++)
+        for(var i = 0; i <= answerArray.length; i++)
         {
-            if(answerArray.length === 8 || answerArray.length === 7)
+            if(answerArray.length === 0)
+            {
+                $("#game").hide();
+                $("#losingPicture").show();
+                $("#youNeedToPractice").show();
+            }
+            else if(answerArray.length === 8 || answerArray.length === 7)
             {
                 $("#game").hide();
                 $("#winningPicture").show();
@@ -140,7 +146,7 @@ $(document).ready(function ()
             else if(answerArray.length === 6 || answerArray.length === 5)
             {
                 $("#game").hide();
-                $("#almostWinning").show();
+                $("#almostWinningGif").show();
                 $("#almostParagraph").show();
             }
             else if(answerArray.length <= 4)
