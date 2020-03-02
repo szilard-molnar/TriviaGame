@@ -8,7 +8,7 @@ The game is multiple choice style. When the user opens the game there is a greet
 Once the user clicks on "Start", the game page will appear. There will be 8 questions about Hungarian history. 
 ![app screenshot](/assets/images/game-page.png)
 
-As mentioned above, this is a multiple choice test. Once the user guessed all the answered, he should click the submit button on the bottom of the game page. According to the amount of the correct answers the player will either lose, win, or encouraged to play more since he almost made it. 
+As mentioned above, this is a multiple choice test. Once the user guessed all the answers, he should click the submit button on the bottom of the game page. According to the amount of the correct answers the player will either lose, win, or encouraged to play more since he almost made it. 
 
 Lose: 4 or less correct answers.
 Almost winning: 5-6 correct answers.
