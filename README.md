@@ -18,4 +18,8 @@ Win: 7-8 correct answers.
 
 The winning, losing and almost winning pages all have corresponding images and gif's that are describing the current situation. Also, these pages have the correct answers on the very bottom.
 
+Click the link below to play the game:
+
+https://szilard-molnar.github.io/TriviaGame/
+
 Good luck, hope you enjoy it, and also hope you will be able to learn so interesting facts about Hungary!
