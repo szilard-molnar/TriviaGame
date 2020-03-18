@@ -1,6 +1,8 @@
 # TriviaGame
 This is a basic trivia game about Hungarian history. Try to guess the correct answers with 2 minutes!
 
+Technologies: HTML5, CSS3, JavaScript, jQuery.
+
 The game is multiple choice style. When the user opens the game there is a greeting page.
 ![app screenshot](/assets/images/opening-page.png)
 
